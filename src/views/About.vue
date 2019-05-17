@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-parallax height="870" :src="require('@/assets/about-map.png')" />
+    <v-img :src="require('@/assets/about-map.png')" />
     <v-parallax height="650" :src="require('@/assets/about-phoenix.png')">
       <v-container fluid>
         <v-flex md5 xs12 class="mt-5">

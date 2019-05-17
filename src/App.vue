@@ -1,14 +1,21 @@
 <template>
   <v-app>
-    <v-toolbar app dark color="#515151" height="100">
+    <v-toolbar app dark color="#515151">
       <v-toolbar-title class="headline text-uppercase">
         <router-link to="/">
           <v-img
-            :src="require('./assets/logo.svg')"
-            class="my-3"
+            :src="require('./assets/logotype.svg')"
+            class="hidden-sm-and-down my-3"
             contain
-            width="463"
-            height="70"
+            width="356"
+            height="54"
+            />
+          <v-img
+            :src="require('./assets/logomark.svg')"
+            class="hidden-md-and-up my-3"
+            contain
+            width="30"
+            height="30"
             />
       </router-link>
       </v-toolbar-title>
