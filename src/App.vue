@@ -1,29 +1,34 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
-</template>
+  <v-app>
+    <v-toolbar app dark color="#515151" height="100">
+      <v-toolbar-title class="headline text-uppercase">
+        <router-link to="/">
+          <v-img
+            :src="require('./assets/logo.svg')"
+            class="my-3"
+            contain
+            width="463"
+            height="70"
+            />
+      </router-link>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <!-- <v-btn
+        flat
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+      > -->
+        <!-- <span class="mr-2">Latest Release</span> -->
+      <!-- </v-btn> -->
+      <v-toolbar-items>
+        <v-btn flat to="/services">Services</v-btn>
+        <v-btn flat to="/about">About</v-btn>
+        <v-btn flat to="/contact">Contact</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+    <v-content>
+      <router-view/>
+    </v-content>
+  </v-app>
+</template>
