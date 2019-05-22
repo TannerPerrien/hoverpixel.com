@@ -15,12 +15,6 @@
     props: {
       title: String,
       subtitle: String
-    },
-    data: function () {
-      return {
-        counter: this.title,
-        subtitle: this.subtitle
-      }
     }
   }
 </script>
